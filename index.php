@@ -106,35 +106,9 @@ p {
   color-adjust: exact;
   -webkit-print-color-adjust: exact;
 }
-#info {
-  font-family: 'Inter', sans-serif;
-  position: absolute;
-  top: 30%;
-  left: 10%;
-  width: calc(50% - 6em);
-  background: #333;
-  color: #eee;
-  padding: 1em 1em .5em 1em;
-  font-size: 1vmax;
-  border-radius: .2em;
-}
-#info p {
-  text-align: left;
-  margin: 0 0 1em 0;
-  line-height: 135%;
-}
-#info a {
-  color: inherit;
-}
 </style>
 </head>
 <body>
-<div id="info">
-<p>👋 <strong>Hello!</strong> If you print this page, you’ll get a nifty calendar that displays all of the year’s dates on a single page. It will automatically fit on a single sheet of paper of any size. For best results, adjust your print settings to landscape orientation and disable the header and footer.</p>
-<p>Take in the year all at once. Fold it up and carry it with you. Jot down your notes on it. Plan things out and observe the passage of time. Above all else, be kind to others.</p>
-<p>Looking for <?php echo date("Y", strtotime("now + 1 year")); ?>? <a href="?year=<?php echo date("Y", strtotime("now + 1 year")); ?>">Here you go!</a></p>
-<p style="font-size: 80%; color: #999;">Made by <a href="https://neatnik.net/">Neatnik</a> &#183; <a href="https://neatnik.net/dispenser/?project=calendar">Source</a></p>
-</div>
 <?php
 date_default_timezone_set('UTC');
 $now = isset($_REQUEST['year']) ? strtotime($_REQUEST['year'].'-01-01') : time();
