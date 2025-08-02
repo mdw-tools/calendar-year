@@ -7,3 +7,11 @@ By default, the current year is used. You can override the year by supplying a y
 You can also switch to a weekday-aligned rendering by setting the layout parameter value to aligned-weekdays, <https://neatnik.net/calendar/?layout=aligned-weekdays>
 
 Unabashedly written in PHP. Print it here: <https://neatnik.net/calendar/>
+
+## Run the script:
+
+```
+$ ./run.sh
+```
+
+Then navigate to http://localhost:8080/?year=2025&layout=aligned-weekdays
