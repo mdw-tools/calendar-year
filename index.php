@@ -227,7 +227,7 @@ if(isset($_REQUEST['layout']) && $_REQUEST['layout'] == 'aligned-weekdays') {
         echo '</span>';
         echo ' ';
         echo '<span class="day">';
-        echo substr(DateTime::createFromFormat('!Y-m-d', date('Y', $now).'-'.$month.'-'.$day)->format('D'), 0, 1);
+        echo substr(date('D', strtotime($date)), 0, 1);
         echo '</span>';
         echo '</td>';
       }
